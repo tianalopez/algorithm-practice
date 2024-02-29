@@ -7,6 +7,7 @@
 # Every close bracket has a corresponding open bracket of the same type.
 
 #!Difficulty: Easy
+#!Category: String
 
 
 class Solution:
