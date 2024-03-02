@@ -7,3 +7,22 @@
 
 #!Difficulty: Easy
 #!Category: Array
+
+
+class Solution:
+    def plusOne(self, digits: List[int]) -> List[int]:
+        reversed = digits[::-1]
+
+        for i in range(len(reversed)):
+            if reversed[i] < 9:
+                reversed[i] += 1
+                break
+            if reversed[i] >= 9:
+                reversed[i] = 0
+                if i + 1 < len(reversed):
+                    reversed[i + 1] = reversed[i + 1] + 1
+                    if reversed[i + 1] <= 9:
+                        break
+                else:
+                    reversed.append(1)
+        return reversed[::-1]
