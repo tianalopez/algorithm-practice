@@ -7,3 +7,12 @@
 
 #!Difficulty: Easy
 #!Category: String
+
+
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        letters = [char for char in s if char.isalnum()]
+        clean_string = "".join(letters).lower()
+        if clean_string == clean_string[::-1]:
+            return True
+        return False
