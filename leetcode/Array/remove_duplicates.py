@@ -24,3 +24,15 @@ class Solution:
             else:
                 i += 1  # Move to the next element only if it's not a duplicate
         return len(nums)
+
+
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        seen = set()
+        i = 0
+        for j in range(len(nums)):
+            if nums[j] not in seen:
+                seen.add(nums[j])
+                nums[i] = nums[j]
+                i += 1
+        return i
