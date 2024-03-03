@@ -13,3 +13,14 @@
 
 #!Difficulty: Easy
 #!Category: Array
+
+
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        i = 0
+        while i + 1 < len(nums):
+            if nums[i] == nums[i + 1]:
+                nums.pop(i)  # Remove the duplicate element
+            else:
+                i += 1  # Move to the next element only if it's not a duplicate
+        return len(nums)
