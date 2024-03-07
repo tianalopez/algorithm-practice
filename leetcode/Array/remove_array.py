@@ -5,3 +5,11 @@
 
 #!Difficulty: Easy
 #!Category: Array
+
+
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        for item in nums:
+            if item == val:
+                nums.remove(val)
+        return len(nums)
