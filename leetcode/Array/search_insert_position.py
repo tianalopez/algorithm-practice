@@ -6,3 +6,16 @@
 
 #!Difficulty: Easy
 #!Category: Array
+
+
+class Solution:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        for i in range(len(nums)):
+            if nums[i] >= target:
+                return i
+            if nums[i] < target and (i + 1) > len(nums) - 1:
+                return i + 1
+            if nums[i] < target and nums[i + 1] >= target:
+                return i + 1
+            elif nums[i] < target and nums[i + 1] < target:
+                i += 1
