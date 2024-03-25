@@ -15,3 +15,6 @@ class Solution:
             current_node = next_node
 
         return prev_node
+
+class Solution:
+    pass
